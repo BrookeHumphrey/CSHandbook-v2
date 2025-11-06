@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Success Handbook</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a2b9b5c1d1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Customer Success Handbook</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="ticketing/index.html">Ticketing</a> |
+            <a href="ehr/index.html">EHR</a> |
+            <a href="resources/index.html">Resources</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="welcome card fade-in">
+            <h2>Welcome to the Customer Success Handbook</h2>
+            <p>This handbook is designed to guide you through ticketing processes, EHR setups, and available resources,
+                providing quick access to procedures, best practices, and troubleshooting guides for Customer Success
+                Specialists.</p>
+        </section>
+
+        <section class="contact card fade-in">
+            <h2>Support Contacts</h2>
+            <p><strong>iScribeHealth Customer Support Line:</strong> 800-356-8048<br>
+                <strong>Support Email:</strong> support@iscribehealth.com
+            </p>
+
+            <button class="toggle-btn"><i class="fas fa-user-tie"></i> Leadership</button>
+            <div class="level collapsible">
+                <p><strong>Ben Walls</strong><br>VP of Customer Success<br>Email: ben.walls@iscribehealth.com</p>
+            </div>
+
+            <button class="toggle-btn"><i class="fas fa-user"></i> Level One</button>
+            <div class="level collapsible">
+                <p><strong>Jennifer Montgomery</strong><br>L1 Lead<br>Email: jennifer.montogomery@iscribehealth.com</p>
+                <p><strong>Amanda Larsen</strong><br>L1 Analyst<br>Email: amanda.larsen@iscribehealth.com</p>
+                <p><strong>Ruth Foster</strong><br>L1 Analyst<br>Email: ruth.foster@iscribehealth.com</p>
+                <p><strong>Shawn Lewis</strong><br>L1 Analyst<br>Email: shawn.lewis@iscribehealth.com</p>
+            </div>
+
+            <button class="toggle-btn"><i class="fas fa-user-shield"></i> Level Two</button>
+            <div class="level collapsible">
+                <p><strong>Kerry-Ann Gayle</strong><br>L2 Lead<br>Email: kerry-ann.gayle@iscribehealth.com</p>
+                <p><strong>Brooke Humphrey</strong><br>L2 Analyst<br>Email: brooke.humphrey@iscribehealth.com</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
