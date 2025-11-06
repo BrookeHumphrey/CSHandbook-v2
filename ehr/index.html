@@ -3,41 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CS Handbook</title>
+  <title>EHR | CS Handbook</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
   <header>
-    <h1>Customer Support Handbook</h1>
+    <h1>Customer Support Handbook - EHR</h1>
     <nav>
-      <a href="/index.html" class="active">Home</a> |
-      <a href="/ehr/index.html">EHR</a> |
-      <a href="/resources/athena-ai.html">Athena AI</a> |
-      <a href="/resources/athena-sdk.html">Athena SDK</a> |
-      <a href="/resources/athena-common.html">Common Issues</a>
+      <a href="/index.html">Home</a> |
+      <a href="index.html" class="active">EHR</a> |
+      <a href="athena-sdk.html">Athena SDK</a> |
+      <a href="athena-ai.html">Athena AI</a> |
+      <a href="athena-stt.html">Speech-to-Text</a> |
+      <a href="athena-airmic.html">AirMic</a> |
+      <a href="athena-setup.html">Setup & Mapping</a> |
+      <a href="athena-common.html">Common Issues</a>
     </nav>
   </header>
 
   <main>
     <section>
-      <h2>Welcome to the CS Handbook</h2>
-      <p>This handbook contains resources, guides, and workflows for Athena integration, AI features, and EHR processes.</p>
+      <h2>Overview</h2>
+      <p>This section covers the Electronic Health Record (EHR) systems we support, including Athena, Epic, and others. Guidance on setup, workflow, and best practices for support.</p>
     </section>
 
     <section>
-      <h3>Sections</h3>
+      <h3>Supported Systems</h3>
       <ul>
-        <li><a href="/ehr/index.html">EHR Overview & Guides</a></li>
-        <li><a href="/resources/athena-ai.html">Athena AI Notes</a></li>
-        <li><a href="/resources/athena-sdk.html">Athena SDK</a></li>
-        <li><a href="/resources/athena-common.html">Common Issues</a></li>
+        <li><strong>Athena:</strong> SDK integration, AI dictation, macros, and workflow support.</li>
+        <li><strong>Epic:</strong> Note generation, speech-to-text, and EHR mapping.</li>
+        <li><strong>Other Systems:</strong> TouchWorks, NextGen, PrimeSuite — limited support for AI dictation and macros.</li>
       </ul>
+    </section>
+
+    <section>
+      <h3>Navigation to Service Lines</h3>
+      <ul>
+        <li><a href="athena-sdk.html">Athena SDK</a></li>
+        <li><a href="athena-ai.html">Athena AI</a></li>
+        <li><a href="athena-stt.html">Speech-to-Text</a></li>
+        <li><a href="athena-airmic.html">AirMic</a></li>
+        <li><a href="athena-setup.html">Setup & Mapping</a></li>
+        <li><a href="athena-common.html">Common Issues</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Tips & Best Practices</h3>
+      <ul>
+        <li>Verify provider workflow before troubleshooting issues.</li>
+        <li>Use confidence scores and correlation IDs to track AI note processing.</li>
+        <li>Follow ticketing processes for accurate case creation.</li>
+        <li>Check system flags and mapping configuration before escalating issues.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Sample Table: User Attributes</h3>
+      <table>
+        <tr><th>Field</th><th>Example Entry</th></tr>
+        <tr><td>Username</td><td>p-mcardwell20</td></tr>
+        <tr><td>Partner</td><td>Athena SDK</td></tr>
+        <tr><td>Display Name</td><td>Provider Full Name</td></tr>
+        <tr><td>EMR</td><td>Athena</td></tr>
+        <tr><td>Device</td><td>iPad, iPhone, PC</td></tr>
+      </table>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Customer Support Handbook</p>
+    <p>&copy; 2025 Customer Support Handbook | EHR Section</p>
   </footer>
 </body>
 </html>
