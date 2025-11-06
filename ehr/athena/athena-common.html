@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athena Common Issues | CS Handbook</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Athena Common Issues</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/ehr/athena/athena-ai.html">Athena AI</a>
+      <a href="/ehr/athena/athena-common.html" class="active">Common Issues</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Common Athena Issues and Fixes</h2>
+      <p>This page outlines frequently encountered problems in Athena workflows and how to resolve them.</p>
+    </section>
+
+    <section>
+      <article>
+        <h3>1. iScribe Dictations Not Appearing</h3>
+        <p>
+          Ensure that the provider’s iScribe app is synced with Athena. If encounters are missing:
+        </p>
+        <ul>
+          <li>Confirm Wi-Fi or cellular connectivity.</li>
+          <li>Check if dictations were saved under the correct user ID.</li>
+          <li>Have the provider refresh the encounter list.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>2. Note Does Not Pull Forward</h3>
+        <p>
+          This usually occurs if the previous encounter was closed or finalized. To correct:
+        </p>
+        <ul>
+          <li>Open the prior encounter and verify it’s in an editable state.</li>
+          <li>Use “Copy Previous Note” from the documentation toolbar.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>3. AI-Generated Text Missing or Incomplete</h3>
+        <p>
+          If Athena AI fails to populate text:
+        </p>
+        <ul>
+          <li>Verify AI assistance is enabled for the provider.</li>
+          <li>Confirm that the template contains active AI fields.</li>
+          <li>Check for browser caching — clear cache and retry.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>4. Error Messages (e.g., “Enum Value Invalid”)</h3>
+        <p>
+          This typically indicates that the system field expects a specific standardized value.
+          Review dropdown or entry fields to ensure data matches Athena’s valid options.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Customer Support Handbook | Athena EHR Section</p>
+  </footer>
+</body>
+</html>
