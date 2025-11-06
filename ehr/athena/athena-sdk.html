@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athena SDK | CS Handbook</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    details { margin-bottom: 1em; }
+    summary { font-weight: bold; cursor: pointer; }
+    table { border-collapse: collapse; width: 100%; margin: 0.5em 0; }
+    table, th, td { border: 1px solid #ccc; padding: 0.5em; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Athena SDK</h1>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="athena-sdk.html" class="active">SDK</a>
+      <a href="athena-ai.html">AI</a>
+      <a href="athena-stt.html">Speech-to-Text</a>
+      <a href="athena-airmic.html">AirMic</a>
+      <a href="athena-setup.html">Setup & Mapping</a>
+      <a href="athena-common.html">Common Issues</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>SDK / Ambient Notes</h2>
+      <p><strong>Setup:</strong> New users and clinics do not need to be pre-configured in iScribe. When a provider launches the Athena One app and starts recording their first job, the clinic and user will be automatically created via SDK integration.</p>
+    </section>
+
+    <section>
+      <details>
+        <summary>New Clinic Creation Logic</summary>
+        <p>iScribe checks for an existing clinic with the same Athena Practice ID and verifies the Partner field is set to Athena SDK. If both conditions are unmet, a new clinic is created.</p>
+      </details>
+
+      <details>
+        <summary>New User Creation Logic</summary>
+        <p>iScribe searches within the matched clinic to see if a user with the same EHR Username exists. If no match is found, a new user is created with the following attributes:</p>
+        <table>
+          <tr><th>Field</th><th>Value Format</th></tr>
+          <tr><td>iScribe Username</td><td>Athena Username + Clinic ID (e.g., p-mcardwell20)</td></tr>
+          <tr><td>Partner</td><td>Athena SDK</td></tr>
+          <tr><td>Display Name</td><td>Provider's full name from Athena</td></tr>
+        </table>
+      </details>
+    </section>
+
+    <section>
+      <details open>
+        <summary>Support Process</summary>
+        
+        <details>
+          <summary>Modification of Provider Preferences</summary>
+          <ul>
+            <li>Clarify the request and confirm provider expectations.</li>
+            <li>New or custom prompts cannot be created for SDK users.</li>
+            <li>Provide feedback and educate providers on best dictation practices.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Output Errors</summary>
+          <ul>
+            <li>Check NPS configuration alignment with workflow.</li>
+            <li>Review confidence score for the Correlation ID.</li>
+            <li>Confirm AI confidence matches expected results. The confidence score must be at least 20%. If no content is saved in the AI Summary, this is due to the overall confidence score. If some sections generated in the AI Summary, those sections would have saved in Athena. The provider should see these.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Jobs Not Received</summary>
+          <ul>
+            <li>Validate provider workflow and device usage.</li>
+            <li>Review Correlation ID & confidence score.</li>
+            <li>Prepare escalation to Level 3 with provider details, workflow, and findings.</li>
+          </ul>
+        </details>
+      </details>
+    </section>
+
+    <section>
+      <details>
+        <summary>SDK Ticketing Process</summary>
+        <ol>
+          <li><strong>Ticket Title:</strong> Format as PX SUPPORT-[Ticket Number] and assign to Athena SDK inbox.</li>
+          <li><strong>Ticket Description Format:</strong>
+            <ul>
+              <li>Clinic: [Clinic name or Athena Practice ID]</li>
+              <li>User: [Provider name / EHR username]</li>
+              <li>Issue: [Detailed description]</li>
+            </ul>
+          </li>
+        </ol>
+
+        <details>
+          <summary>Customer Attributes</summary>
+          <table>
+            <tr><th>Field</th><th>Entry</th></tr>
+            <tr><td>Add User</td><td>Username as listed in Admin Portal</td></tr>
+            <tr><td>Customer Profile</td><td>Review for accuracy</td></tr>
+            <tr><td>Reason for Case</td><td>Clear summary of issue</td></tr>
+            <tr><td>Severity</td><td>Based on urgency and impact</td></tr>
+            <tr><td>EMR</td><td>Athena</td></tr>
+            <tr><td>Product</td><td>Athena SDK</td></tr>
+            <tr><td>App Version</td><td>Athena One version</td></tr>
+            <tr><td>Device</td><td>Optional</td></tr>
+            <tr><td>Detailed Workflow Steps</td><td>Outline provider dictation and submission workflow</td></tr>
+            <tr><td>Troubleshooting Steps Taken</td><td>Include steps already performed</td></tr>
+          </table>
+        </details>
+      </details>
+    </section>
+
+    <section>
+      <details>
+        <summary>Ticket Status Definitions</summary>
+        <ul>
+          <li>Submitted: Ticket created, not yet worked</li>
+          <li>In Progress: Actively being worked</li>
+          <li>Pending Development: Awaiting dev team input</li>
+          <li>Waiting on Customer: Awaiting provider response</li>
+          <li>Resolved: Issue resolved, ready to close</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Customer Support Handbook | Athena SDK Section</p>
+  </footer>
+</body>
+</html>
