@@ -3,77 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EHR | CS Handbook</title>
-  <link rel="stylesheet" href="/style.css" />
+  <title>EHR Section | CS Handbook</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: #d1d5db;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .ehr-card {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .ehr-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .ehr-card h3 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .ehr-content {
+      margin-top: 1rem;
+      display: none; /* hidden by default */
+    }
+
+    .ehr-card.open .ehr-content {
+      display: block;
+    }
+
+    .ehr-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .ehr-card li {
+      margin: 0.5rem 0;
+    }
+
+    .ehr-card a {
+      color: #1d4ed8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .ehr-card a:hover {
+      color: #60a5fa;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Customer Support Handbook - EHR</h1>
+    <h1>EHR Section</h1>
     <nav>
-      <a href="/index.html">Home</a> |
-      <a href="index.html" class="active">EHR</a> |
-      <a href="athena-sdk.html">Athena SDK</a> |
-      <a href="athena-ai.html">Athena AI</a> |
-      <a href="athena-stt.html">Speech-to-Text</a> |
-      <a href="athena-airmic.html">AirMic</a> |
-      <a href="athena-setup.html">Setup & Mapping</a> |
-      <a href="athena-common.html">Common Issues</a>
+      <a href="../index.html">Home</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Overview</h2>
-      <p>This section covers the Electronic Health Record (EHR) systems we support, including Athena, Epic, and others. Guidance on setup, workflow, and best practices for support.</p>
-    </section>
+    <h2>Welcome to the EHR Section</h2>
+    <p>Click on an EHR system to expand and see its documentation.</p>
 
-    <section>
-      <h3>Supported Systems</h3>
-      <ul>
-        <li><strong>Athena:</strong> SDK integration, AI dictation, macros, and workflow support.</li>
-        <li><strong>Epic:</strong> Note generation, speech-to-text, and EHR mapping.</li>
-        <li><strong>Other Systems:</strong> TouchWorks, NextGen, PrimeSuite — limited support for AI dictation and macros.</li>
-      </ul>
-    </section>
+    <div class="ehr-card">
+      <h3>Athena</h3>
+      <div class="ehr-content">
+        <ul>
+          <li><a href="athena/athena-ai.html">Athena AI Flags & Workflow</a></li>
+          <li><a href="athena/athena-stt.html">Athena Speech-to-Text</a></li>
+          <li><a href="athena/athena-airmic.html">Athena AirMic</a></li>
+          <li><a href="athena/athena-setup.html">Athena Setup & Mapping</a></li>
+          <li><a href="athena/athena-common.html">Athena Common Issues</a></li>
+          <li><a href="athena/athena-sdk.html">Athena SDK</a></li>
+        </ul>
+      </div>
+    </div>
 
-    <section>
-      <h3>Navigation to Service Lines</h3>
-      <ul>
-        <li><a href="athena-sdk.html">Athena SDK</a></li>
-        <li><a href="athena-ai.html">Athena AI</a></li>
-        <li><a href="athena-stt.html">Speech-to-Text</a></li>
-        <li><a href="athena-airmic.html">AirMic</a></li>
-        <li><a href="athena-setup.html">Setup & Mapping</a></li>
-        <li><a href="athena-common.html">Common Issues</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Tips & Best Practices</h3>
-      <ul>
-        <li>Verify provider workflow before troubleshooting issues.</li>
-        <li>Use confidence scores and correlation IDs to track AI note processing.</li>
-        <li>Follow ticketing processes for accurate case creation.</li>
-        <li>Check system flags and mapping configuration before escalating issues.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Sample Table: User Attributes</h3>
-      <table>
-        <tr><th>Field</th><th>Example Entry</th></tr>
-        <tr><td>Username</td><td>p-mcardwell20</td></tr>
-        <tr><td>Partner</td><td>Athena SDK</td></tr>
-        <tr><td>Display Name</td><td>Provider Full Name</td></tr>
-        <tr><td>EMR</td><td>Athena</td></tr>
-        <tr><td>Device</td><td>iPad, iPhone, PC</td></tr>
-      </table>
-    </section>
+    <div class="ehr-card">
+      <h3>Allscripts</h3>
+      <div class="ehr-content">
+        <ul>
+          <li><a href="allscripts/allscripts-ai.html">Allscripts AI Flags & Workflow</a></li>
+          <li><a href="allscripts/allscripts-stt.html">Allscripts Speech-to-Text</a></li>
+        </ul>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Customer Support Handbook | EHR Section</p>
-  </footer>
+  <script>
+    // Collapsible functionality with single-open behavior
+    const cards = document.querySelectorAll('.ehr-card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Close all other cards
+        cards.forEach(c => {
+          if (c !== card) c.classList.remove('open');
+        });
+        // Toggle the clicked card
+        card.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
