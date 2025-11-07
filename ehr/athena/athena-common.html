@@ -66,6 +66,21 @@
           Review dropdown or entry fields to ensure data matches Athena’s valid options.
         </p>
       </article>
+
+      <article>
+  <h3>5. Auth0 Integration & Login Guidance</h3>
+  <p>In the event that a login issue arises, users can switch from Wi-Fi to LTE, allowing them to continue their work. Please do not remove any previously established URLs. The IP addresses mentioned below are new additions to avoid any potential issues.</p>
+
+  <p><strong>Why this is necessary:</strong> We will be changing our authentication method to better support our users and enhance overall security. As part of these changes, we have identified a few IP addresses and domains that may need to be added to the whitelist to prevent the firewall from blocking them.</p>
+
+  <ul>
+    <li>Whitelist all subdomains for <a href="https://iscribehealth.com" target="_blank">https://iscribehealth.com</a>: <code>*.iscribehealth.com</code></li>
+    <li>Authentication process: <code>prod-iscribehealth.us.auth0.com</code></li>
+    <li>Images used in the application: <code>cdn.auth0.com</code></li>
+    <li>App validation with Auth0 domain: <code>app-site-association.cdn-apple.com</code></li>
+    <li>Login page logos: <code>cdn.prod.website-files.com</code></li>
+  </ul>
+</article>
     </section>
   </main>
 
