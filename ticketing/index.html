@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing Section</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav a {
+            color: #d1d5db;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .ticketing-card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ticketing-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .ticketing-card h3 {
+            margin-top: 0;
+            color: #2563eb;
+        }
+
+        .ticketing-content {
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .ticketing-card.open .ticketing-content {
+            display: block;
+        }
+
+        .ticketing-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ticketing-card li {
+            margin: 0.5rem 0;
+        }
+
+        .ticketing-card a {
+            color: #1d4ed8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .ticketing-card a:hover {
+            color: #60a5fa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ticketing Section</h1>
+        <nav>
+            <a href="../index.html">Home</a> |
+            <a href="../ehr/index.html">EHR</a> |
+            <a href="../resources/index.html">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Ticketing Systems Overview</h2>
+        <p>Click on a ticketing system to expand and see its documentation.</p>
+
+        <div class="ticketing-card">
+            <h3>iScribe Support Tickets</h3>
+            <div class="ticketing-content">
+                <ul>
+                    <li><a href="iscribe/creating-tickets.html">Creating Tickets</a></li>
+                    <li><a href="iscribe/escalation-process.html">Escalation Process</a></li>
+                    <li><a href="iscribe/priority-guidelines.html">Priority Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ticketing-card">
+            <h3>Other Systems</h3>
+            <div class="ticketing-content">
+                <ul>
+                    <li><a href="other/third-party-tickets.html">Third Party Tickets</a></li>
+                    <li><a href="other/monitoring.html">Monitoring & Alerts</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const cards = document.querySelectorAll('.ticketing-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => {
+                    if (c !== card) {
+                        c.classList.remove('open');
+                    }
+                });
+                card.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
